@@ -31,7 +31,7 @@ Once you've started the database, you're set up to start running commands agains
 This will create a `dump.sql` file in this project folder which can be used as a backup.
 
 ### Restoring the database
-`mv ~/db/database.db ~/database.db.old`  
+`mv ~/db/database.db ~/db/database.db.old`  
 `cat dump.sql | docker run -it -v ~/db:/db chglenn20/sqlite-docker database.db`
 
 This will rename the existing database and restore the last backup (dump.sql) to the database. 
